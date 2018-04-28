@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="TriangleBean" class="Triangle"/>
+		<property name="alpha" ref="pointalpha"></property>
+	<property name="beta " ref="pointbeta"></property>
+	
+	
+	<!--Setter injection -->
+	<!-- <property name = "type" value="Equilateral"/> <property name= "width" 
+		value="20"/> -->
+
+	<!--constructor injection -->
+	<!-- <constructor-arg type="java.lang.String" index ="0" value="Equilateral"/> 
+		<constructor-arg type="int" index="1" value="45"/> -->
+
+
+
+	<bean id="pointalpha" class="Point" />
+	<property name="x" value="5" />
+	<property name="y" value="69" />
+
+
+
+	<bean id="pointbeta" class="Point" />
+	<property name="x" value="1" />
+	<property name="y" value="2" />
+
+</beans>
